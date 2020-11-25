@@ -1,8 +1,20 @@
 import React from 'react';
 import { render } from 'react-dom';
+import { BrowserRouter as Router } from 'react-router-dom';
+
+import UserProvider from './providers/UserProvider';
+import PostsProvider from './providers/PostsProvider';
+import Application from './components/Application';
 
 import './index.scss';
 
-import Application from './components/Application';
-
-render(<Application />, document.getElementById('root'));
+render(
+  <Router>
+    <UserProvider>
+      <PostsProvider>
+        <Application />
+      </PostsProvider>
+    </UserProvider>
+  </Router>,
+  document.getElementById('root')
+);

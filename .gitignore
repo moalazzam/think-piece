@@ -11,6 +11,15 @@
 # production
 /build
 
+# Firebase
+.idea
+**/node_modules/*
+**/.firebaserc
+
+# Firebase Patch
+.runtimeconfig.json
+.firebase/
+
 # misc
 .DS_Store
 .env.local
